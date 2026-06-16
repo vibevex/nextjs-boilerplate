@@ -29,19 +29,36 @@ export default function Page() {
     <main style={styles.page}>
       <div style={styles.container}>
         {/* HERO */}
-        <h1 style={styles.title}>
-          You still matter in their life.
-        </h1>
+        <h1 style={styles.title}>😬</h1>
 
-        <p style={styles.subtitle}>
-          You just don’t see it anymore.
-        </p>
+        <p style={styles.subtitle}>No hello. Just vibe.</p>
 
         <p style={styles.desc}>
-          3–5 close friends. Endless group chats. Still feeling out of the loop.
-          <br />
-          Not because people stopped caring — but because no one wants to be “the one who asks first.”
+          Stay connected without the pressure of talking.
         </p>
+
+        {/* HOW IT WORKS */}
+        <div style={styles.section}>
+          <p style={styles.sectionTitle}>How it works</p>
+          <p style={styles.sectionSubtitle}>3 seconds. That’s all.</p>
+
+          <div style={styles.steps}>
+            <div style={styles.step}>
+              <span style={styles.number}>1</span>
+              <span style={styles.stepText}>Pick your mood</span>
+            </div>
+
+            <div style={styles.step}>
+              <span style={styles.number}>2</span>
+              <span style={styles.stepText}>Your group sees it</span>
+            </div>
+
+            <div style={styles.step}>
+              <span style={styles.number}>3</span>
+              <span style={styles.stepText}>No explanation needed</span>
+            </div>
+          </div>
+        </div>
 
         {/* EMAIL FORM */}
         <form onSubmit={submit} style={styles.form}>
@@ -59,12 +76,10 @@ export default function Page() {
 
         {/* SUCCESS */}
         {done && (
-          <p style={styles.success}>
-            You’re in. We’ll reach out soon.
-          </p>
+          <p style={styles.success}>You’re in. We’ll reach out soon.</p>
         )}
 
-        {/* SMALL NOTE */}
+        {/* NOTE */}
         <p style={styles.note}>
           Private beta. No spam. Just early access.
         </p>
@@ -79,7 +94,7 @@ const styles: Record<string, React.CSSProperties> = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "radial-gradient(circle at top, #111, #000)",
+    background: "radial-gradient(circle at top, #0a0a0a, #000)",
     color: "white",
     fontFamily: "system-ui, -apple-system, sans-serif",
     padding: "24px",
@@ -92,23 +107,76 @@ const styles: Record<string, React.CSSProperties> = {
   },
 
   title: {
-    fontSize: "36px",
-    fontWeight: 700,
-    lineHeight: 1.2,
-    marginBottom: "12px",
+    fontSize: "48px",
+    marginBottom: "10px",
+    filter: "drop-shadow(0 0 10px rgba(255,255,255,0.08))",
   },
 
   subtitle: {
-    fontSize: "18px",
-    opacity: 0.8,
-    marginBottom: "20px",
+    fontSize: "20px",
+    fontWeight: 500,
+    marginBottom: "10px",
+    opacity: 0.9,
   },
 
   desc: {
     fontSize: "14px",
-    opacity: 0.6,
-    lineHeight: 1.6,
-    marginBottom: "32px",
+    opacity: 0.55,
+    marginBottom: "28px",
+  },
+
+  /* SECTION */
+  section: {
+    marginBottom: "28px",
+  },
+
+  sectionTitle: {
+    fontSize: "13px",
+    letterSpacing: "0.5px",
+    opacity: 0.4,
+    textTransform: "uppercase",
+    marginBottom: "6px",
+  },
+
+  sectionSubtitle: {
+    fontSize: "16px",
+    opacity: 0.7,
+    marginBottom: "14px",
+  },
+
+  steps: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+  },
+
+  step: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    padding: "10px 12px",
+    borderRadius: "12px",
+    background: "rgba(255,255,255,0.03)",
+    border: "1px solid rgba(255,255,255,0.06)",
+    textAlign: "left",
+  },
+
+  number: {
+    width: "20px",
+    height: "20px",
+    borderRadius: "6px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "12px",
+    background: "rgba(255,255,255,0.08)",
+    color: "white",
+    flexShrink: 0,
+  },
+
+  stepText: {
+    fontSize: "13px",
+    opacity: 0.75,
   },
 
   form: {
@@ -119,16 +187,16 @@ const styles: Record<string, React.CSSProperties> = {
 
   input: {
     padding: "12px",
-    borderRadius: "10px",
-    border: "1px solid #333",
-    background: "#111",
+    borderRadius: "12px",
+    border: "1px solid rgba(255,255,255,0.08)",
+    background: "rgba(255,255,255,0.04)",
     color: "white",
     outline: "none",
   },
 
   button: {
     padding: "12px",
-    borderRadius: "10px",
+    borderRadius: "12px",
     border: "none",
     background: "white",
     color: "black",
@@ -145,6 +213,6 @@ const styles: Record<string, React.CSSProperties> = {
   note: {
     marginTop: "24px",
     fontSize: "12px",
-    opacity: 0.4,
+    opacity: 0.35,
   },
 };
