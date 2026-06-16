@@ -80,9 +80,26 @@ export default function Page() {
         )}
 
         {/* NOTE */}
-        <p style={styles.note}>
-          Private beta. No spam. Just early access.
-        </p>
+        <p style={styles.note}>Private beta. No spam. Just early access.</p>
+
+        {/* DISCORD CTA */}
+        <a
+          href="https://discord.gg/zzTGZbXF"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.discord}
+        >
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="white"
+          >
+            <path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515c-.21.375-.444.864-.608 1.249a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.249 19.736 19.736 0 0 0-4.885 1.515C1.207 9.046.35 13.58.77 18.057a19.9 19.9 0 0 0 5.993 3.03c.462-.63.873-1.295 1.226-1.994a13.107 13.107 0 0 1-1.872-.892c.126-.094.252-.192.372-.291 3.927 1.793 8.18 1.793 12.061 0 .12.1.246.198.372.292a12.299 12.299 0 0 1-1.873.892c.36.698.772 1.362 1.225 1.993a19.86 19.86 0 0 0 6.002-3.03c.5-5.177-.838-9.674-3.549-13.661z" />
+          </svg>
+
+          <span style={styles.discordText}>Join Discord</span>
+        </a>
       </div>
     </main>
   );
@@ -107,9 +124,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
 
   title: {
-    fontSize: "48px",
-    marginBottom: "10px",
-    filter: "drop-shadow(0 0 10px rgba(255,255,255,0.08))",
+    fontSize: "72px", // 🔥 放大重点
+    marginBottom: "8px",
+    filter: "drop-shadow(0 0 18px rgba(255,255,255,0.10))",
   },
 
   subtitle: {
@@ -125,7 +142,6 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: "28px",
   },
 
-  /* SECTION */
   section: {
     marginBottom: "28px",
   },
@@ -214,5 +230,24 @@ const styles: Record<string, React.CSSProperties> = {
     marginTop: "24px",
     fontSize: "12px",
     opacity: 0.35,
+  },
+
+  discord: {
+    marginTop: "28px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+    padding: "12px 14px",
+    borderRadius: "12px",
+    border: "1px solid rgba(255,255,255,0.08)",
+    background: "rgba(255,255,255,0.03)",
+    textDecoration: "none",
+    transition: "all 0.2s ease",
+  },
+
+  discordText: {
+    fontSize: "13px",
+    opacity: 0.7,
   },
 };
